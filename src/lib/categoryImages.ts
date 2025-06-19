@@ -30,7 +30,7 @@ export const getCategoryImages = (category: string): string[] => {
   for (let i = 1; i <= count; i++) {
     const paddedIndex = i.toString().padStart(2, '0');
     const imageName = `${folderName} ${paddedIndex}.png`;
-    images.push(`/image/${folderName}/${imageName}`);
+    images.push(`/images/${folderName}/${imageName}`);
   }
   
   return images;
