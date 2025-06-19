@@ -12,7 +12,8 @@ export const getLocalImagePath = (category: string, index: number): string => {
   // Format the number with leading zeros
   const paddedIndex = (index + 1).toString().padStart(2, '0');
   // In a Vite/React app, we can reference files in the public directory directly
-  return `/image/${folder}/${prefix}${paddedIndex}.png`;
+  // Using relative path for Vercel deployment
+  return `./images/${folder}/${prefix}${paddedIndex}.png`;
 };
 
 // Function to generate an array of local image paths
