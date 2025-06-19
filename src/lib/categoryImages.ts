@@ -29,7 +29,8 @@ export const getCategoryImages = (category: string): string[] => {
   for (let i = 1; i <= count; i++) {
     const paddedIndex = i.toString().padStart(2, '0');
     const imageName = `${folderName} ${paddedIndex}.png`;
-    const imagePath = `/images/${folderName}/${imageName}`;
+    // 使用相对路径，Vite 会自动处理资源路径
+    const imagePath = `./images/${folderName}/${imageName}`;
     console.log(`[DEBUG] Generated image path ${i}:`, imagePath);
     images.push(imagePath);
   }
